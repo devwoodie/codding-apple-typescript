@@ -1,4 +1,5 @@
-let name: string = "kim";
+
+let names: string = "kim";
 let wow: number = 123;
 let members: string[] = ['kim', 'park'];
 let objects: {member1: string, member2: string} = {member1: 'kim', member2: 'park'};
@@ -38,3 +39,40 @@ let 학교: {score: (number | boolean)[], teacher: string, friend: string | stri
 };
 학교.score[4] = false;
 학교.friend = ['Lee' , 학교.teacher];
+
+//함수
+function handleFunction(x: number | string): void{
+    if(typeof x === "number"){
+        console.log(x + 3);
+    }
+};
+handleFunction(20);
+
+function helloName(name?: string){
+    if(name){
+        console.log(`안녕하세요 ${name}`);
+    }else{
+        console.log(`이름이 없습니다.`);
+    };
+};
+helloName('홍길동');
+
+function countLength(word: string | number){
+    return word.toString().length;
+};
+countLength(333);
+
+function handleMarry(pay: number, home: boolean, attr: string): string|void{
+    let score: number = 0;
+
+    if(home){
+        score += 500;
+    };
+    if(attr === "상"){
+        score += 100;
+    };
+    if(score >= 600){
+        return "결혼 가능";
+    };
+};
+handleMarry(100, true, "상");
