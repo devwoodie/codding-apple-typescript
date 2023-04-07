@@ -40,12 +40,18 @@ let 학교: {score: (number | boolean)[], teacher: string, friend: string | stri
 학교.score[4] = false;
 학교.friend = ['Lee' , 학교.teacher];
 
-//함수
+//함수 narrowing&assertion
 function handleFunction(x: number | string): void{
-    if(typeof x === "number"){
-        console.log(x + 3);
-    }
+    let array: number[] = [];
+    if(typeof x === "number"){ //Narrowing
+        array[0] = x;
+    };
+    array[1] = x as number; //Assertion
 };
+// assetion 문법 용도
+// 1. Narrowing 할 때 씀
+// 2. 무슨 타입이 들어올지 100% 확실할 때 씀
+
 handleFunction(20);
 
 function helloName(name?: string){
