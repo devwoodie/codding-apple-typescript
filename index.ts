@@ -175,7 +175,6 @@ itsMe = 'woodie';
 function itsMeFunction(a: 'hello'): 1|0{
     return 1;
 }
-
 //literal types
 function rsp(a: '가위'|'바위'|'보'): ('가위'|'바위'|'보')[]{
     return ['보'];
@@ -191,6 +190,7 @@ function  myFunction(a: 'kim'){
 
 }
 myFunction(note.name)
+
 
 
 
