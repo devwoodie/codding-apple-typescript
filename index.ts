@@ -169,6 +169,28 @@ let userINfo:NewValidation = {
     phone : 1234
 }
 
+let itsMe: 'woodie' | 'dongwoo';
+itsMe = 'woodie';
+
+function itsMeFunction(a: 'hello'): 1|0{
+    return 1;
+}
+
+//literal types
+function rsp(a: '가위'|'바위'|'보'): ('가위'|'바위'|'보')[]{
+    return ['보'];
+}
+rsp('바위');
+
+var note = {
+    name: 'kim'
+} as const
+//as const -> object value 값을 그대로 타입 지정을 해줌
+
+function  myFunction(a: 'kim'){
+
+}
+myFunction(note.name)
 
 
 
